@@ -30,6 +30,7 @@ export default class App extends React.Component {
                 longUrl={url.longUrl}
                 shortUrl={url.shortUrl}
                 counter={url.counter}
+                // UPDATE COUNTER IN STATE
                 onCounterClick={() => {
                   const nextCounter = [...this.state.urls];
                   nextCounter[index] = { ...nextCounter[index] };
@@ -64,9 +65,7 @@ export default class App extends React.Component {
                   })
                   .then(res => {
                     console.log(res.data);
-                    // if (status === "200") {
-                    //   alert("votre url simplifiée à été crée");
-                    // }
+                    alert(res.data);
                   });
                 const response = await axios.get(
                   "https://short-url-pm-gilleron.herokuapp.com/"
