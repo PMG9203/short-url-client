@@ -53,7 +53,7 @@ export default class App extends React.Component {
           <div className="App-Form">
             <input
               className="input"
-              placeholder="Your original URL here"
+              placeholder="http://www.votreurl.ici"
               value={this.state.longUrl}
               onChange={event => {
                 this.setState({ longUrl: event.target.value });
@@ -85,7 +85,11 @@ export default class App extends React.Component {
           </div>
         </header>
         <div>
-          <h1>Liste des adresses Url</h1>
+          <div className="bloc-legende-url">
+            <span className="origin-url">Original URL</span>
+            <span className="short-url">Short URL</span>
+            <span className="visits-url">Visits</span>
+          </div>
           {this.renderListUrls()}
         </div>
       </div>
