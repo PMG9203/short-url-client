@@ -1,0 +1,21 @@
+.line-url {
+  width: 900px;
+  border-bottom: 1px solid #c7c7c7;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+}
+
+.text-origin-url {
+  width: 400px;
+}
+
+.text-short-url {
+  width: 450px;
+}
+
+.text-counter {
+  font-size: 15px;
+  color: #6d6d6d;
+}

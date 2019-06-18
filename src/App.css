@@ -1,35 +1,80 @@
-.App {
-  /* text-align: center; */
-}
-
 .App-header {
   background-color: #32508b;
-  min-height: 30vh;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.h1 {
-  font-size: 100;
-  font-weight: 400;
+.App {
+  margin: auto;
+}
+.title {
   color: white;
+  font-weight: 400;
+  margin-left: 100px;
 }
 
 .App-Form {
-  display: flex;
-  flex-direction: row;
+  margin-left: 100px;
+}
+
+.input {
+  width: 500px;
+  height: 40px;
+  margin-right: 30px;
+  border: 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  font-size: 15px;
+  outline: none;
+}
+
+.btt-shorten {
+  height: 40px;
+  font-weight: 800;
+  font-size: 13px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  color: #32508b;
+  outline: none;
+  cursor: pointer;
 }
 
 .App-link {
   color: #32508b;
 }
 
-.block-li-url {
-  list-style-type: none;
-  padding: 0;
+.bloc-legende-url {
+  margin: 50px 0 0 100px;
+  height: 40px;
+  width: 920px;
+  background-color: rgb(230, 230, 230);
 }
 
-.line-url {
+.block-li-url {
   display: flex;
+  flex-direction: column-reverse;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 100px;
+}
+
+.bloc-legende-url {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #6d6d6d;
+}
+
+.origin-url {
+  width: 400px;
+}
+.short-url {
+  width: 450px;
 }
