@@ -8,7 +8,7 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      "https://short-url-pm-gilleron.herokuapp.com/"
+      "https://short-url-server-pm.herokuapp.com/"
     );
     this.setState({
       urls: response.data,
@@ -49,18 +49,21 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="h1">Simplify your links</h1>
+          <h1 className="title">Simplify your links</h1>
           <div className="App-Form">
             <input
+              className="input"
+              placeholder="Your original URL here"
               value={this.state.longUrl}
               onChange={event => {
                 this.setState({ longUrl: event.target.value });
               }}
             />
             <button
+              className="btt-shorten"
               onClick={async event => {
                 await axios
-                  .post("https://short-url-pm-gilleron.herokuapp.com/create", {
+                  .post("https://short-url-server-pm.herokuapp.com/create", {
                     longUrl: this.state.longUrl
                   })
                   .then(res => {
@@ -68,7 +71,7 @@ export default class App extends React.Component {
                     alert(res.data);
                   });
                 const response = await axios.get(
-                  "https://short-url-pm-gilleron.herokuapp.com/"
+                  "https://short-url-server-pm.herokuapp.com/"
                 );
                 this.setState({
                   urls: response.data,

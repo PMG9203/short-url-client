@@ -1,4 +1,5 @@
 import React from "react";
+import "./LineUrl.css";
 
 class LineUrl extends React.Component {
   render() {
@@ -6,7 +7,12 @@ class LineUrl extends React.Component {
 
     return (
       <li>
-        <a href={longUrl} target="_blank" rel="noopener noreferrer">
+        <a
+          className=""
+          href={longUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {longUrl}
         </a>
         <a
